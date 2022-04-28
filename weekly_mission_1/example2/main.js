@@ -1,0 +1,8 @@
+// node main.js
+
+const logger = require('./logger')//Llama al archivo logger.js 
+
+logger.info('This is an informational message')
+logger.verbose('This is a verbose message')
+
+//commit
