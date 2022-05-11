@@ -30,35 +30,41 @@ const repo = {
 
 //Issue
 const issue = {
-  title: "Soporte",
-  repositoryNameAssociated: "LaunchX",
-  status: "Open",
-  numberOfComments: 110,
-  labels: "Rebulding first practice",
-  author: "Mishel",
-  dateCreate: "10/04/2022",
-  lastUpdate: "28/04/2022",
+    title: "Soporte",
+    repositoryNameAssociated: "LaunchX",
+    status: "Open",
+    numberOfComments: 110,
+    labels: "Rebulding first practice",
+    author: "Mishel",
+    dateCreate: "10/04/2022",
+    lastUpdate: "28/04/2022",
 
-  getTitleAndAuthor: function(){
+    getTitleAndAuthor: function(){
     return `The Issue "${this.title}" was created by ${this.author}`
-  },
-  getGeneralInfo: function(){
+    },
+    getGeneralInfo: function(){
     return `The Issue ${this.title} was created by ${this.author}, it's open and has ${this.numberOfComments} comments.
     The repository associated is ${this.repositoryNameAssociated}, it was created ${this.dateCreate} `
   }
 
-}
-console.log(issue.getTitleAndAuthor())
-console.log(issue.getGeneralInfo())
+  }
+  console.log(issue.getTitleAndAuthor())
+  console.log(issue.getGeneralInfo())
 
 //Pull Request
 const pull_request= {
-  title: `Master`,
-  branchName: `request`,
-  dateCreate: `17/04/2022`,
-  status: `Open `,
-  repositoryNameAssociated: `LaunchX`,
+    title: `Master`,
+    branchName: `request`,
+    dateCreate: `17/04/2022`,
+    status: `Open `,
+    repositoryNameAssociated: `LaunchX`,
 
-    
-}
-   
+    getStatus: function(){
+      return `This Pull Request is ${this.status}.`
+    },
+    getTitleAndAuthor: function(){
+      return `This Pull Request named ${this.title} was created by ${this.dateCreate}.`
+    }
+  }
+   console.log(pull_request.getStatus())
+   console.log(pull_request.getTitleAndAuthor())
