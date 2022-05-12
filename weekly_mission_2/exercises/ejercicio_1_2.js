@@ -59,6 +59,22 @@ const profile = {
     uber_rewards: 1440,
     cellphone: 5574003774,
     getInfoForDriver: function(){
-        return 
+        return `Name: ${this.name}, Stars: ${this.stars}, Cellphone: ${this.cellphone}.`
     }
 }
+console.log(`The passenger is:\n` + profile.getInfoForDriver())
+
+//Travel
+const travel = {
+    origin: "Ignacio Allende, Nicolas Romero",
+    destination: "Av. Politecnico, Gustavo A. Madero",
+    time: 50,
+    kilometers: 20,
+    getOriginDestination: function(){
+        return `\nThe origin is ${this.origin} and the destination is ${this.destination}.`
+    },
+    getDistanceTime: function(){
+        return `\nAprox. time: ${this.time} min with ${this.kilometers} km.`
+    }
+}
+console.log("Your next trip:\n" + profile.name + travel.getOriginDestination() + travel.getDistanceTime())
