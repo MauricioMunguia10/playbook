@@ -1,7 +1,6 @@
-//Ejercicio 2
 const explorers = [
     {
-      name: "Explorer 1",
+      name: "Roberto",
       exercises_completed: 10,
       rate: 99,
       city: "CDMX",
@@ -21,7 +20,7 @@ const explorers = [
       }
     },
     {
-      name: "Explorer 2",
+      name: "Juan",
       exercises_completed: 9,
       city: "Veracruz",
       rate: 50,
@@ -40,7 +39,7 @@ const explorers = [
       }
     },
     {
-      name: "Explorer 3",
+      name: "Dulce",
       exercises_completed: 3,
       city: "Sonora",
       rate: 100,
@@ -58,14 +57,18 @@ const explorers = [
         }
       }
     }
-   ]
-
+   ];
 //Imprime el nombre (propiedad name) de cada explorer en la lista, usa FOR EACH
-//console.log(explorers[0].name)
+console.log("Nombre de los Explorers a continuacion:")
+explorers.forEach(explorer => {
+    console.log(explorer.name)
+});
 
-function imprimirNombres(nombre, indice) {
-    console.log(`Está el numero de estudiante ${indice + 1}  -${nombre} - presente? Sí!`)
-    ;}
+//Imprime el stack de cada explorer, usa FOR EACH
+console.log("Stack de los Explorers a continuacion:")
+explorers.forEach(explorer => {
+    console.log(explorer.stack)
+});
 
-explorers.forEach((nombre, indice) => imprimirNombres(nombre, indice));
-//hacerlo son con forEach
+//Crea una nueva lista con las listas de stacks de cada explorer, usa MAP
+//explorers.stack.map(stk => )
