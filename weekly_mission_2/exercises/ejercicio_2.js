@@ -65,10 +65,27 @@ explorers.forEach(explorer => {
 });
 
 //Imprime el stack de cada explorer, usa FOR EACH
-console.log("Stack de los Explorers a continuacion:")
+console.log("Stack de cada Explorer:")
 explorers.forEach(explorer => {
+    console.log(explorer.name)
     console.log(explorer.stack)
 });
 
 //Crea una nueva lista con las listas de stacks de cada explorer, usa MAP
-//explorers.stack.map(stk => )
+console.log("Stack de los Explorers:")
+const stackExplorers = explorers.map(explorer => {
+    return explorer.stack
+});
+console.log(stackExplorers)
+
+//Obtén la lista de explorers que tengan en su stack "js", 
+//usa FILTER (para validar un elemento en un lista se usa el método includes)
+console.log("Stack de los Explorers con JS:")
+const stackExplorersJS = explorers.filter((explorers) =>
+    explorers.stack.includes('js')
+);
+const nameExplorersJS = stackExplorersJS.map(explorer => {
+  return explorer.name
+});
+console.log(nameExplorersJS)
+
